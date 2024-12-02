@@ -6,6 +6,7 @@ async function info() {
 
   // JE FAIS UN TEST
 
+  // Je fais un 2ème test
   let data = await response.json();
 
   return data;
