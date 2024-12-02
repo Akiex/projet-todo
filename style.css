@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* Passage de la police de 16px par défaut, à 10px -----> 10/16*100= 62.5 */
+}
+
+body {
+  background-image: linear-gradient(
+    to bottom,
+    #003459,
+    #00456d,
+    #005880,
+    #006a93,
+    #007ea6
+  );
+  background-repeat: no-repeat;
+  font-family: "Montserrat";
+}
+
+main {
+  max-width: 700px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 10rem;
+  text-align: center;
+  color: #fff;
+}
+
+h2 {
+  font-size: 6rem;
+  color: #fff;
+}
+
+ul {
+  flex-direction: column;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  list-style-type: none;
+  margin: 1rem 0 1rem 0;
+  padding: 1rem;
+  border-radius: 0.2rem;
+  font-size: 2rem;
+}
+
+.liChecked {
+  /*Classe à appliquer aux <li> concernés lors de l'activation du checkbox*/
+  background-color: #00a8e8;
+  text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 2em;
+  height: 2em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  width: 0.8em;
+  height: 1.1em;
+  transform: scale(0);
+  transition: 100ms transform ease-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+  text-decoration: none;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: scale(2.2);
+}
